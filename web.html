@@ -1,0 +1,1653 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerdas Minds - Child and Teen Development Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between image and text */
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.logo span {
+    color: #ffcc00;
+}
+
+/* Remove the old logo icon if it exists */
+.logo::after {
+    display: none;
+}
+        .contact-info {
+            text-align: right;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .logo:hover .logo-image {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.logo:hover h1 {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(106, 17, 203, 0.8), rgba(37, 117, 252, 0.8)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1470&auto=format&fit=crop') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#f8f9fa"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#f8f9fa"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#f8f9fa"></path></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .floating-kids {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-kids img {
+            position: absolute;
+            width: 120px;
+            height: auto;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+        }
+
+        .floating-kids img:nth-child(1) {
+            top: 20%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-kids img:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation-delay: 1s;
+            width: 100px;
+        }
+
+        .floating-kids img:nth-child(3) {
+            top: 30%;
+            left: 75%;
+            animation-delay: 2s;
+            width: 80px;
+        }
+
+        .floating-kids img:nth-child(4) {
+            top: 70%;
+            left: 10%;
+            animation-delay: 3s;
+            width: 90px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease 0.6s both;
+        }
+
+        .cta-button:hover {
+            background-color: #ffd84d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 40px;
+            height: 200%;
+            background: rgba(255,255,255,0.2);
+            transform: rotate(30deg);
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover::after {
+            left: 120%;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2575fc;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-family: 'Comic Neue', cursive;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 15px auto 0;
+            color: #666;
+        }
+
+        /* Programs Section */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .program-header {
+            padding: 25px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-header::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: inherit;
+            filter: blur(10px);
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .autism-bg {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+        }
+
+        .dyslexia-bg {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .neuro-bg {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .program-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .program-header p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .program-content {
+            padding: 25px;
+            position: relative;
+        }
+
+        .program-content ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        .program-content ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .program-content ul li:hover {
+            background-color: #f8f9fa;
+            padding-left: 10px;
+        }
+
+        .program-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .program-content ul li i {
+            color: #2575fc;
+            margin-right: 10px;
+            font-size: 1.2rem;
+            min-width: 20px;
+        }
+
+        .program-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            opacity: 0.1;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover .program-icon {
+            opacity: 0.2;
+            transform: scale(1.1);
+        }
+
+        /* Goals Section */
+        .goals {
+            background-color: #e3f2fd;
+            background-image: url('https://www.transparenttextures.com/patterns/always-grey.png');
+        }
+
+        .goals-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .goal-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .goal-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        .goal-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .goal-icon {
+            font-size: 2.5rem;
+            color: #2575fc;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .goal-card:hover .goal-icon {
+            transform: rotate(15deg) scale(1.2);
+        }
+
+        .goal-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Tracks Section */
+        .tracks-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .track-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .track-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .track-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .track-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .track-content {
+            padding: 20px;
+        }
+
+        .track-content ul {
+            list-style-type: none;
+        }
+
+        .track-content ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .track-content ul li i {
+            color: #2575fc;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .track-image {
+            height: 120px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 15px 0;
+        }
+
+        /* Packages Section */
+        .packages-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .package-card.popular {
+            border: 3px solid #ffcc00;
+        }
+
+        .package-card.popular::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background: #ffcc00;
+            color: #333;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .package-header {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .package-header h3 {
+            font-size: 1.8rem;
+            color: #2575fc;
+            margin-bottom: 10px;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #6a11cb;
+            margin-bottom: 5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .package-price::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 3px;
+        }
+
+        .package-details ul {
+            list-style-type: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .package-details ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .package-details ul li:hover {
+            background-color: #f8f9fa;
+            padding-left: 10px;
+        }
+
+        .package-details ul li i {
+            color: #43e97b;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            z-index: 1;
+        }
+
+        .step {
+            background: white;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+            border: 5px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .step-content {
+            text-align: center;
+            max-width: 250px;
+            position: relative;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .step-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Team Section */
+        .team {
+            background-color: #f0f4f8;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .member-image {
+            height: 250px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/always-grey.png');
+            opacity: 0.1;
+        }
+
+        .member-info {
+            padding: 25px;
+            position: relative;
+        }
+
+        .member-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .member-info p {
+            color: #2575fc;
+            font-weight: 500;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/always-grey.png');
+            opacity: 0.1;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .testimonial-content {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .author-info p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        
+        
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact-info-full {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-info-full h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2575fc;
+            position: relative;
+            display: inline-block;
+        }
+
+        .contact-info-full h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details p {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-details p:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-details i {
+            color: #2575fc;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .qr-code {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 300px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-code:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .qr-code img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 15px;
+            border: 10px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .qr-code h3 {
+            margin-bottom: 15px;
+            color: #2575fc;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 60px 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/always-grey.png');
+            opacity: 0.1;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #2575fc;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            margin: 10px 0;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #2575fc;
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #444;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #2575fc;
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Floating elements */
+        .floating-element {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+
+            .logo::after {
+                right: 50%;
+                transform: translateX(50%);
+                top: -20px;
+            }
+
+            .contact-info {
+                text-align: center;
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .contact-info p {
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .step-content {
+                margin-bottom: 40px;
+            }
+
+            .package-card.popular::before {
+                top: 10px;
+                right: -40px;
+                padding: 5px 35px;
+                font-size: 0.7rem;
+            }
+           
+.form-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.form-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #ff8e53 0%, #ff6b6b 100%);
+}
+
+.form-button i {
+    margin-right: 8px;
+}
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+<div class="logo">
+    <img src="https://i.imgur.com/3ZWM7sN.png" alt="Cerdas Minds Logo" class="logo-image">
+    <h1>CERDAS <span>MINDS</span></h1>
+</div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Kota Kinabalu</p>
+                    <p><i class="fas fa-phone"></i> 011-1995 7879</p>
+                    <p><i class="fas fa-envelope"></i> cerdasminds@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-kids">
+            <img src="https://cdn-icons-png.flaticon.com/512/1864/1864593.png" alt="Happy child">
+            <img src="https://cdn-icons-png.flaticon.com/512/1864/1864514.png" alt="Teenager">
+            <img src="https://cdn-icons-png.flaticon.com/512/1864/1864534.png" alt="Child reading">
+            <img src="https://cdn-icons-png.flaticon.com/512/1864/1864483.png" alt="Child playing">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>CHILD AND TEEN DEVELOPMENT HUB</h2>
+                <p>SPECIALISED EARLY INTERVENTION & INTENSIVE LEARNING CENTRE</p>
+                <p>Structured, evidence-based programmes for children and teens aged 4–17</p>
+                <a href="#contact" class="cta-button">Book an Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs">
+        <div class="container">
+            <div class="section-title">
+                <h2>OUR SPECIALISED PROGRAMMES</h2>
+                <p>Tailored interventions designed to meet each child's unique needs</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header autism-bg">
+                        <h3>AUTISM</h3>
+                        <p>AUTISM LEARNING & BEHAVIOURAL SUPPORT</p>
+                    </div>
+                    <div class="program-content">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Communication (PECS, visuals, expressive speech)</li>
+                            <li><i class="fas fa-check-circle"></i> Behaviour (Emotional control, transitions)</li>
+                            <li><i class="fas fa-check-circle"></i> Sensory (Sensory integration & motor planning)</li>
+                            <li><i class="fas fa-check-circle"></i> Daily Routine (Toileting, feeding, dressing)</li>
+                            <li><i class="fas fa-check-circle"></i> Social Interaction (Eye contact, turn-taking, teamwork)</li>
+                        </ul>
+                        <h4>APPROACHES USED:</h4>
+                        <p>Visual structure (TEACCH), Applied Behaviour Analysis (ABA), DIR/Floor time, Social stories & play-based learning</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913073.png" class="program-icon" alt="Autism icon">
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header dyslexia-bg">
+                        <h3>DYSLEXIA</h3>
+                        <p>DYSLEXIA & LEARNING SUPPORT PROGRAMME</p>
+                    </div>
+                    <div class="program-content">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Phonemic Awareness & Phonics</li>
+                            <li><i class="fas fa-check-circle"></i> Reading Fluency & Comprehension</li>
+                            <li><i class="fas fa-check-circle"></i> Spelling Patterns</li>
+                            <li><i class="fas fa-check-circle"></i> Structured Writing</li>
+                            <li><i class="fas fa-check-circle"></i> Confidence in Learning</li>
+                        </ul>
+                        <h4>APPROACHES USED:</h4>
+                        <p>Multisensory phonics, Visual aids, Word families, Games, One-on-one & Small group sessions</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png" class="program-icon" alt="Dyslexia icon">
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header neuro-bg">
+                        <h3>NEURO DEVELOPMENT</h3>
+                        <p>NEURODEVELOPMENTAL SUPPORT (ADHD, GDD, ID)</p>
+                    </div>
+                    <div class="program-content">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Impulsivity & Focus</li>
+                            <li><i class="fas fa-check-circle"></i> Academics/Vocational Skills</li>
+                            <li><i class="fas fa-check-circle"></i> Self-Care & Daily Living Skills</li>
+                            <li><i class="fas fa-check-circle"></i> Social-Emotional Learning</li>
+                            <li><i class="fas fa-check-circle"></i> Executive Functioning</li>
+                        </ul>
+                        <h4>APPROACHES USED:</h4>
+                        <p>Behavioural coaching, Visual task schedules, Social-emotional games, Movement-based learning</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3048/3048127.png" class="program-icon" alt="Neuro icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="goals">
+        <div class="container">
+            <div class="section-title">
+                <h2>OUR PROGRAMME GOALS</h2>
+                <p>We aim to help every child reach their full potential</p>
+            </div>
+            <div class="goals-container">
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Communication</h3>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academics</h3>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Social-Emotional Regulation</h3>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Independence</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>PROGRAMME TRACKS</h2>
+                <p>Age-appropriate learning paths for every developmental stage</p>
+            </div>
+            <div class="tracks-container">
+                <div class="track-card">
+                    <div class="track-header autism-bg">
+                        <h3>AUTISM TRACKS</h3>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-image" style="background-image: url('https://cdn-icons-png.flaticon.com/512/3094/3094833.png');"></div>
+                        <ul>
+                            <li><i class="fas fa-child"></i> Ages 4-8: Learn through play and routine</li>
+                            <li><i class="fas fa-school"></i> Ages 9-12: Build skills for school success</li>
+                            <li><i class="fas fa-briefcase"></i> Ages 13-17: Prepare for life and work</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-header dyslexia-bg">
+                        <h3>DYSLEXIA TRACKS</h3>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-image" style="background-image: url('https://cdn-icons-png.flaticon.com/512/2232/2232688.png');"></div>
+                        <ul>
+                            <li><i class="fas fa-book"></i> Ages 6-11: Literacy Booster</li>
+                            <li><i class="fas fa-calculator"></i> Ages 12-15: Remedial Academic</li>
+                        </ul>
+                        <h4>LITERACY BOOSTER (Ages 6-11):</h4>
+                        <p>Learn to read using phonics and fun activities, Practice writing and spelling step-by-step, Improve vocabulary and understanding of stories, Build confidence in using language every day</p>
+                        <h4 style="margin-top: 15px;">REMEDIAL ACADEMIC (Ages 12-15):</h4>
+                        <p>Strengthen core subjects in small groups, Learn at their own pace, Get help with schoolwork and exams, Build focus, motivation, and confidence</p>
+                    </div>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-header neuro-bg">
+                        <h3>NEURO DEVELOPMENT TRACKS</h3>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-image" style="background-image: url('https://cdn-icons-png.flaticon.com/512/3048/3048157.png');"></div>
+                        <ul>
+                            <li><i class="fas fa-puzzle-piece"></i> Ages 4-8: Learn through play and structure</li>
+                            <li><i class="fas fa-school"></i> Ages 9-12: Strengthen academic and social foundations</li>
+                            <li><i class="fas fa-user-graduate"></i> Ages 13-17: Prepare for independence and future</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>PROGRAM PACKAGES</h2>
+                <p>Flexible options to suit every family's needs</p>
+            </div>
+            <div class="packages-container">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>PACKAGE A</h3>
+                        <p>CERDAS WEEKDAYS</p>
+                    </div>
+                    <div class="package-price">RM750<span style="font-size: 1rem;">/month</span></div>
+                    <div class="package-details">
+                        <ul>
+                            <li><i class="fas fa-calendar-alt"></i> Weekday Intensive (Mon&Tue OR Wed&Thu)</li>
+                            <li><i class="far fa-clock"></i> 4 hours/week = 16-20 hours/month</li>
+                            <li><i class="fas fa-check"></i> Choose ONE session slot:</li>
+                            <li style="padding-left: 30px;"><i class="far fa-circle"></i> 8:30 AM – 10:30 AM</li>
+                            <li style="padding-left: 30px;"><i class="far fa-circle"></i> 11:00 AM – 1:00 PM</li>
+                            <li style="padding-left: 30px;"><i class="far fa-circle"></i> 1:30 PM – 3:30 PM</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="package-card popular">
+                    <div class="package-header">
+                        <h3>PACKAGE B</h3>
+                        <p>CERDAS WEEKEND</p>
+                    </div>
+                    <div class="package-price">RM750<span style="font-size: 1rem;">/month</span></div>
+                    <div class="package-details">
+                        <ul>
+                            <li><i class="fas fa-calendar-alt"></i> Weekend Intensive (Saturday & Sunday)</li>
+                            <li><i class="far fa-clock"></i> 4 hours/week = 16-20 hours/month</li>
+                            <li><i class="fas fa-check"></i> Choose ONE session slot:</li>
+                            <li style="padding-left: 30px;"><i class="far fa-circle"></i> 10:00 AM – 12:00 PM</li>
+                            <li style="padding-left: 30px;"><i class="far fa-circle"></i> 12:30 PM – 2:30 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>ENROLMENT PROCESS</h2>
+                <p>Simple steps to get started with our programmes</p>
+            </div>
+            <div class="process-steps">
+                <div class="step-content">
+                    <div class="step">1</div>
+                    <h3>Assessment</h3>
+                    <p>Conducted by our Occupational Therapist & Behavioural Interventionist/Clinical Psychologist</p>
+                </div>
+                <div class="step-content">
+                    <div class="step">2</div>
+                    <h3>Report & Recommendation</h3>
+                    <p>Parents receive a personalised report with programme and package recommendation</p>
+                </div>
+                <div class="step-content">
+                    <div class="step">3</div>
+                    <h3>Learning Plan</h3>
+                    <p>Individualised learning plans + Monthly parent progress reviews</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">SUCCESS STORIES</h2>
+                <p style="color: rgba(255,255,255,0.8);">What parents say about our programmes</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "My son has made incredible progress since joining Cerdas Minds. His communication skills have improved dramatically and he's so much happier now."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Parent">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Lim</h4>
+                            <p>Mother of 7-year-old with autism</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>OUR PROFESSIONAL TEAM</h2>
+                <p>Experienced specialists dedicated to your child's growth</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Behavioural Interventionists</h3>
+                        <p>Experienced with Autism, ADHD, ID & SLD trained in visual strategies & positive behaviour support</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dyslexia Interventionists</h3>
+                        <p>Trained in multisensory literacy methods</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Occupational Therapists</h3>
+                        <p>For motor, sensory & daily living skills, vocational skills</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Referral Network</h3>
+                        <p>Clinical psychologists, psychiatrist, speech therapists (as needed)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>CONTACT & FEES</h2>
+            <p>Get in touch to start your child's journey</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info-full">
+                <h3>Get In Touch</h3>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> First Floor, Lot No.74, Block I-3, Alamesra Plaza Permai Phase 2B& 2C, Lorong Alamesra Plaza Permai 5, 88450 Kota Kinabalu Sabah.</p>
+                    <p><i class="fas fa-phone"></i> Call/WhatsApp: 011-1995 7879</p>
+                    <p><i class="fas fa-envelope"></i> Email: cerdasminds@gmail.com</p>
+                </div>
+                <h3 style="margin-top: 30px;">Fees & Enrolment</h3>
+                <div class="contact-details">
+                    <p><i class="fas fa-file-invoice-dollar"></i> Placement Evaluation: RM250</p>
+                    <p><i class="fas fa-edit"></i> Registration & Enrolment: RM500</p>
+                    <p><i class="fas fa-money-bill-wave"></i> Monthly Programme Fees: RM750</p>
+                </div>
+                <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 10px; animation: pulse 2s infinite;">
+                    <p style="font-weight: 600; color: #2575fc;"><i class="fas fa-gift"></i> LIMITED TIME OFFER: Save up to RM750/month!</p>
+                </div>
+            </div>
+            <div class="qr-code">
+                <h3>Scan to Book</h3>
+                <img src="https://i.imgur.com/tan1KP3.png" alt="QR Code" class="custom-qr">
+                <p>Scan QR Code to Book an Assessment or Register</p>
+                <div class="form-button-container">
+                    <a href="https://docs.google.com/document/d/1w6O10FKXwoMX61Mx8oX56tnMet2fy8v5sOqd2ZbEIPo/edit?usp=sharing" 
+                       class="form-button" 
+                       target="_blank">
+                        <i class="fas fa-file-alt"></i> Online Registration Form
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CERDAS MINDS</h3>
+                    <p>Specialised Early Intervention & Intensive Learning Centre for children and teens aged 4–17</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61578309097862"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/cerdasminds"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@cerdas.minda"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Programmes</h3>
+                    <a href="#">Autism Support Programme</a>
+                    <a href="#">Dyslexia & Literacy Programme</a>
+                    <a href="#">Neurodevelopmental Support</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#programs">Our Programmes</a>
+                    <a href="#process">Enrolment Process</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Cerdas Minds. All Rights Reserved.</p>
+                <p>Do you have any questions? Reach Cerdas Mind at +60 11 1995 7879</p>
+                <p>Thanks for visiting!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.program-card, .goal-card, .package-card, .team-member, .step-content, .track-card, .testimonial, .qr-code');
+            
+            elements.forEach(el => {
+                const elementPosition = el.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if(elementPosition < screenPosition) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.program-card, .goal-card, .package-card, .team-member, .step-content, .track-card, .testimonial, .qr-code');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease';
+            });
+            
+            // Trigger first animation check
+            animateOnScroll();
+        });
+
+        // Add scroll event listener
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Simple testimonial slider
+        let currentTestimonial = 0;
+        const testimonials = [
+            {
+                quote: "Dulu Nara selalu mengamuk, tidak mau cakap-cakap. Tapi lepas 6 bulan pigi Cerdas Minds, dia sudah pandai bergaul, ikut rutin, dan mula tunjuk minat mau belajar. Kami bersyukur banyak-banyak bah.",
+                name: "Nara",
+                role: "10 tahun, Kota Belud, Autisme ",
+                image: "https://randomuser.me/api/portraits/women/65.jpg"
+            },
+            {
+                quote: "Bryan sering diejek kerana lambat membaca. Di sini, dia belajar dengan cara yang sesuai dengan gaya belajarnya. Kini dia boleh baca dengan lancar dan lebih yakin di sekolah.",
+                name: "MBryan",
+                role: "12 tahun, Penampang, Disleksia ",
+                image: "https://randomuser.me/api/portraits/men/32.jpg"
+            },
+            {
+                quote: "anak kami lambat tangkap dan cepat lupa. Tapi lepas masuk Cerdas Minds, dorang ajar cara praktikal dan sabar bah. Sekarang Angela sudah pandai kira-kira dan tulis sikit-sikit. Kami pun happy tengok perubahan dia.",
+                name: "Angela",
+                role: "9 Tahun Tuaran, Slow Learner ",
+                image: "https://randomuser.me/api/portraits/women/44.jpg"
+            },
+            {
+                quote: "Tason used to avoid eye contact and scream when he was upset. After joining Cerdas Minds, he can now express himself using visuals and is more calm in class.",
+                name: "Jason ",
+                role: "8 years old, Inanam, Autism (Chinese Sabahan)",
+                image: "https://randomuser.me/api/portraits/women/44.jpg"
+            },
+                        {
+                quote: "Reading was always a struggle for Priya. Thanks to the multi-sensory methods at Cerdas Minds, she now enjoys books and even helps her younger cousin read.",
+                name: "Priya",
+                role: "11 years old, Kinarut, Dyslexia ",
+                image: "https://randomuser.me/api/portraits/women/44.jpg"
+            }
+            ,
+                        {
+                quote: "Liam was behind in school, especially in math and writing. Cerdas Minds created a fun, structured plan. We see huge progress in just a few months – he's much more confident.",
+                name: "Liam",
+                role: "7 years old, Kota Kinabalu, Slow Learner (Expat, China)",
+                image: "https://randomuser.me/api/portraits/women/44.jpg"
+            }
+        ];
+
+        function rotateTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            updateTestimonial();
+        }
+
+        function updateTestimonial() {
+            const testimonial = testimonials[currentTestimonial];
+            const testimonialElement = document.querySelector('.testimonial');
+            
+            testimonialElement.querySelector('.testimonial-content').textContent = testimonial.quote;
+            testimonialElement.querySelector('h4').textContent = testimonial.name;
+            testimonialElement.querySelector('.author-info p').textContent = testimonial.role;
+            testimonialElement.querySelector('.author-image img').src = testimonial.image;
+        }
+
+        // Rotate testimonials every 5 seconds
+        setInterval(rotateTestimonial, 5000);
+    </script>
+</body>
+</html>
